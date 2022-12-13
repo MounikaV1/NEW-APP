@@ -1,0 +1,24 @@
+<p>
+	<ngb-alert> This alert's type is success and it's not dismissible because the config has been customized </ngb-alert>
+</p>
+<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<section>
+	<div class="example-label">Raised</div>
+	<div class="example-button-row">
+	  <button mat-raised-button>Basic</button>
+	  <button mat-raised-button color="primary">Primary</button>
+	  <button mat-raised-button color="accent">Accent</button>
+	  <button mat-raised-button color="warn">Warn</button>
+	  <button mat-raised-button disabled>Disabled</button>
+	  <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+	</div>
+  </section>
+  <h1>{{data}}</h1>
+  <!--<app-child [item]="data" ></app-child>
+  <button (click)="updateData()">Update Child Component</button>
+
+  <ul *ngFor="let user of userDetails">
+	<app-user-details [item]='user'></app-user-details>
+  </ul>  -->
+  <app-child (updateDataEvent)="updateData($event)" ></app-child>
+  
